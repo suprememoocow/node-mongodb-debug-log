@@ -34,6 +34,12 @@ mongo:slowlog users insert took 2468000µs: {"a":1,"b":2,"_id":"55a7aecb68969380
 mongo users findOne took 2870µs: {} +3ms
 ```
 
+If you just want to see the slowlog messages, only enable the slowlog debug log
+```shell
+DEBUG=mongodb-query:slowlog node app.js  # Make sure mongodb-query matches `debugName` if you've set it
+```
+
+
 # Licence
 
 License
