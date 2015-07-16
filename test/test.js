@@ -1,16 +1,14 @@
 var mongodb = require('mongodb');
-var mongoDogStats = require('../lib/index');
+var mongoDebug = require('../lib/index');
 var MongoClient = require('mongodb').MongoClient;
-var StatsD = require('node-statsd');
 
 describe('mongo-datadog-stats', function() {
-  var db, client;
+  var db;
 
   before(function(done) {
     db = null;
-    client = new StatsD({ mock: true });
 
-    mongoDogStats.install(mongodb, {
+    mongoDebug.install(mongodb, {
       debugName: 'mongo',
       slowLogMS: 10
     });
