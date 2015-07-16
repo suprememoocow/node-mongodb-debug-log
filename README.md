@@ -1,9 +1,9 @@
-# node-mongodb-datadog-stats
+# node-mongodb-debug-log
 
 Log mongodb query performance information using [debug](https://www.npmjs.com/package/debug).
 
 ```shell
-npm install mongodb-datadog-stats --save
+npm install node-mongodb-debug-log --save
 ```
 
 ```javascript
