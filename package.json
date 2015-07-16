@@ -1,6 +1,6 @@
 {
   "name": "node-mongodb-debug-log",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Log mongodb query times through debug in node",
   "main": "lib/index.js",
   "scripts": {
