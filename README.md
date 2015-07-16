@@ -8,18 +8,23 @@ npm install mongodb-datadog-stats --save
 
 ```javascript
 var mongodb = require('mongodb');
-var mongoDogStats = require('node-mongodb-debug-log');
+var mongoDebug = require('node-mongodb-debug-log');
 
-mongoDogStats.install(mongodb, {
-  debugName: 'mongo',
-  slowLogMS: 10
+/* Using the default values */
+mongoDebug.install(mongodb);
+
+/* ... or by specifying options */
+mongoDebug.install(mongodb, {
+  debugName: 'mongo',  // Defaults to mongodb-query
+  slowLogMS: 10        // Defaults to 100ms
 });
+
 ```
 
 Then, make sure you enable the debug log via the DEBUG environment var.
 
 ```shell
-DEBUG=mongo node app.js
+DEBUG=mongodb-query node app.js  # Make sure mongodb-query matches `debugName` if you've set it
 ```
 
 And you'll start seeing debug messages, in your console:
